@@ -1,0 +1,737 @@
+2025-11-30 18:48:45,959 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-11-30 18:48:45,959 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-11-30 18:48:45,959 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-11-30 18:48:45,960 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=25, max_concurrent_llm_calls=50
+2025-11-30 18:48:47,010 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-11-30 18:48:47,010 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-11-30 18:48:47,010 - Knowledge - INFO - load persisted knowledge: begin
+2025-11-30 18:48:47,011 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-11-30 18:48:47,011 - Knowledge - INFO - load persisted knowledge: end
+2025-11-30 18:48:47,011 - Knowledge - WARNING - No persisted knowledge found. Files will be queued during start()
+2025-11-30 18:48:47,115 - Knowledge - INFO - 🔧 add_redis_support_to_knowledge called - knowledge_instance.id: TJOY6J-b2073vr, build_ids: ['b2073vr']
+2025-11-30 18:48:47,115 - Knowledge - INFO - 🔧 Using build_ids[0] for Redis prefix: b2073vr
+2025-11-30 18:48:47,115 - Knowledge - INFO - 🔧 Redis prefix set to: knowledge:b2073vr:
+2025-11-30 18:48:47,115 - Knowledge - INFO - 🔧 Redis support added - prefix: knowledge:b2073vr:, stored build_ids: ['b2073vr']
+2025-11-30 18:48:47,116 - Knowledge - INFO - Redis support added with prefix knowledge:b2073vr:
+2025-11-30 18:48:47,343 - Knowledge - INFO - Starting knowledge initialization for ID: TJOY6J-b2073vr
+2025-11-30 18:48:47,343 - Knowledge - INFO - 🔍 Checking Redis for build_id: b2073vr
+2025-11-30 18:48:47,343 - Knowledge - INFO - 🔍 Full session ID: TJOY6J-b2073vr
+2025-11-30 18:48:47,343 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b2073vr:
+2025-11-30 18:48:47,343 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-11-30 18:48:47,343 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-11-30 18:48:47,344 - Knowledge - INFO - 🔍 Using build_ids for Redis lookup: ['b2073vr']
+2025-11-30 18:48:47,344 - Knowledge - INFO - 🔍 GETTING FROM REDIS - Requested IDs: ['b2073vr']
+2025-11-30 18:48:47,344 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b2073vr, Prefix: knowledge:b2073vr:
+2025-11-30 18:48:47,358 - Knowledge - WARNING - ❌ NO DATA FOUND in Redis for IDs: ['b2073vr'], Prefixes tried: ['knowledge:b2073vr:']
+2025-11-30 18:48:47,358 - Knowledge - WARNING - ❌ No Redis cache found
+2025-11-30 18:48:47,358 - Knowledge - INFO - 🔍 GETTING FROM REDIS - Requested IDs: ['b2073vr']
+2025-11-30 18:48:47,358 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b2073vr, Prefix: knowledge:b2073vr:
+2025-11-30 18:48:47,369 - Knowledge - WARNING - ❌ NO DATA FOUND in Redis for IDs: ['b2073vr'], Prefixes tried: ['knowledge:b2073vr:']
+2025-11-30 18:48:47,369 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-11-30 18:48:47,417 - Knowledge - INFO - load persisted docinfo: begin
+2025-11-30 18:48:47,417 - Knowledge - INFO - load persisted docinfo: end
+2025-11-30 18:48:47,417 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-11-30 18:48:47,418 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-11-30 18:48:47,418 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-11-30 18:48:47,418 - Knowledge - INFO - 🔍 Using build_ids for Redis lookup: ['b2073vr']
+2025-11-30 18:48:47,418 - Knowledge - INFO - 🔍 GETTING FROM REDIS - Requested IDs: ['b2073vr']
+2025-11-30 18:48:47,418 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b2073vr, Prefix: knowledge:b2073vr:
+2025-11-30 18:48:47,433 - Knowledge - WARNING - ❌ NO DATA FOUND in Redis for IDs: ['b2073vr'], Prefixes tried: ['knowledge:b2073vr:']
+2025-11-30 18:48:47,433 - Knowledge - WARNING - ❌ No Redis cache found
+2025-11-30 18:48:47,433 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-11-30 18:48:47,433 - Knowledge - INFO - load persisted knowledge: begin
+2025-11-30 18:48:47,433 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-11-30 18:48:47,434 - Knowledge - INFO - load persisted knowledge: end
+2025-11-30 18:48:47,434 - Knowledge - INFO - 📁 Disk load complete in 0.06s
+2025-11-30 18:48:47,434 - Knowledge - INFO - Populating ingest queue with source files...
+2025-11-30 18:48:47,446 - Knowledge - INFO - Added 153 files from /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786 to ingest queue
+2025-11-30 18:48:47,451 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-11-30 18:48:47,457 - Knowledge - INFO - knowledge worker kw1 start
+2025-11-30 18:48:47,458 - Knowledge - INFO - [kw1] Queue=153, InProgress=0, PendingWorkers=0/0, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,458 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=153, active_workers=0/0
+2025-11-30 18:48:47,459 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-11-30 18:48:47,460 - Knowledge - INFO - knowledge worker kw2 start
+2025-11-30 18:48:47,460 - Knowledge - INFO - [kw2] Queue=141, InProgress=0, PendingWorkers=1/1, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,460 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.cpp
+2025-11-30 18:48:47,460 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-11-30 18:48:47,461 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=141, active_workers=1/2
+2025-11-30 18:48:47,461 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.cpp
+2025-11-30 18:48:47,462 - Knowledge - INFO - knowledge worker kw3 start
+2025-11-30 18:48:47,462 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-11-30 18:48:47,462 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.h
+2025-11-30 18:48:47,462 - Knowledge - INFO - knowledge worker kw4 start
+2025-11-30 18:48:47,462 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CMakeLists.txt
+2025-11-30 18:48:47,462 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.h (ext=.h, size=1041)
+2025-11-30 18:48:47,462 - Knowledge - INFO - [kw4] Queue=129, InProgress=0, PendingWorkers=2/3, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,463 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-11-30 18:48:47,463 - Knowledge - INFO - [kw3] Queue=129, InProgress=0, PendingWorkers=2/4, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,464 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.cpp
+2025-11-30 18:48:47,464 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=129, active_workers=2/4
+2025-11-30 18:48:47,464 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CMakeLists.txt (ext=.txt, size=19902)
+2025-11-30 18:48:47,465 - Knowledge - INFO - knowledge worker kw5 start
+2025-11-30 18:48:47,465 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=129, active_workers=2/4
+2025-11-30 18:48:47,465 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-11-30 18:48:47,465 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.h
+2025-11-30 18:48:47,466 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.h
+2025-11-30 18:48:47,466 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CMakeLists.txt
+2025-11-30 18:48:47,466 - Knowledge - INFO - knowledge worker kw6 start
+2025-11-30 18:48:47,466 - Knowledge - INFO - [kw5] Queue=105, InProgress=0, PendingWorkers=4/5, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,466 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/CMakeLists.txt
+2025-11-30 18:48:47,466 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-11-30 18:48:47,467 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.h (ext=.h, size=902)
+2025-11-30 18:48:47,467 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CMakeLists.txt (ext=.txt, size=1510)
+2025-11-30 18:48:47,467 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.h (ext=.h, size=1345)
+2025-11-30 18:48:47,467 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=105, active_workers=4/6
+2025-11-30 18:48:47,467 - Knowledge - INFO - [kw6] Queue=105, InProgress=0, PendingWorkers=4/6, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,467 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/CMakeLists.txt (ext=.txt, size=3391)
+2025-11-30 18:48:47,468 - Knowledge - INFO - knowledge worker kw7 start
+2025-11-30 18:48:47,468 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.h
+2025-11-30 18:48:47,468 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-11-30 18:48:47,468 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CookieJarCryptoExample.h
+2025-11-30 18:48:47,468 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.h (ext=.h, size=1097)
+2025-11-30 18:48:47,468 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=105, active_workers=5/7
+2025-11-30 18:48:47,468 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.cpp
+2025-11-30 18:48:47,468 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.cpp
+2025-11-30 18:48:47,469 - Knowledge - INFO - knowledge worker kw8 start
+2025-11-30 18:48:47,469 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.cpp
+2025-11-30 18:48:47,469 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-11-30 18:48:47,469 - Knowledge - INFO - [kw7] Queue=93, InProgress=0, PendingWorkers=5/8, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,469 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.h
+2025-11-30 18:48:47,469 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindAampJSBindings.cmake
+2025-11-30 18:48:47,470 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.cpp
+2025-11-30 18:48:47,470 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/HTML5Notification.h
+2025-11-30 18:48:47,470 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Module.h
+2025-11-30 18:48:47,470 - Knowledge - INFO - [kw8] Queue=81, InProgress=0, PendingWorkers=6/8, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,471 - Knowledge - INFO - knowledge worker kw9 start
+2025-11-30 18:48:47,471 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=93, active_workers=6/8
+2025-11-30 18:48:47,471 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-11-30 18:48:47,471 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.h
+2025-11-30 18:48:47,471 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindAampJSBindings.cmake (ext=.cmake, size=920)
+2025-11-30 18:48:47,471 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:48:47,471 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.h (ext=.h, size=974)
+2025-11-30 18:48:47,472 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/HTML5Notification.h (ext=.h, size=1639)
+2025-11-30 18:48:47,472 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Module.h (ext=.h, size=921)
+2025-11-30 18:48:47,472 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=81, active_workers=6/9
+2025-11-30 18:48:47,472 - Knowledge - INFO - [kw9] Queue=71, InProgress=0, PendingWorkers=7/9, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,472 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNopoll.cmake
+2025-11-30 18:48:47,472 - Knowledge - INFO - knowledge worker kw10 start
+2025-11-30 18:48:47,472 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-11-30 18:48:47,473 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEWebKit.cmake
+2025-11-30 18:48:47,473 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.h (ext=.h, size=1749)
+2025-11-30 18:48:47,473 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.h
+2025-11-30 18:48:47,473 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.cpp
+2025-11-30 18:48:47,473 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowserJsonRpc.cpp
+2025-11-30 18:48:47,473 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/main.cpp
+2025-11-30 18:48:47,473 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=71, active_workers=8/10
+2025-11-30 18:48:47,474 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNopoll.cmake (ext=.cmake, size=1155)
+2025-11-30 18:48:47,474 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLMPLAYER.cmake
+2025-11-30 18:48:47,474 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLMPLAYER.cmake (ext=.cmake, size=1899)
+2025-11-30 18:48:47,475 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCurl.cmake
+2025-11-30 18:48:47,476 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDL.cmake
+2025-11-30 18:48:47,477 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.h
+2025-11-30 18:48:47,478 - Knowledge - INFO - knowledge worker kw11 start
+2025-11-30 18:48:47,478 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNXCLIENT.cmake
+2025-11-30 18:48:47,478 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-11-30 18:48:47,478 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.cpp
+2025-11-30 18:48:47,478 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.h (ext=.h, size=1073)
+2025-11-30 18:48:47,482 - Knowledge - INFO - [kw10] Queue=51, InProgress=0, PendingWorkers=9/11, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,483 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCurl.cmake (ext=.cmake, size=1002)
+2025-11-30 18:48:47,483 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.cpp
+2025-11-30 18:48:47,483 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEBackend.cmake
+2025-11-30 18:48:47,483 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.h (ext=.h, size=1012)
+2025-11-30 18:48:47,483 - Knowledge - INFO - [kw11] Queue=51, InProgress=0, PendingWorkers=9/11, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,484 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDL.cmake (ext=.cmake, size=796)
+2025-11-30 18:48:47,484 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNXCLIENT.cmake (ext=.cmake, size=1813)
+2025-11-30 18:48:47,484 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.h
+2025-11-30 18:48:47,484 - Knowledge - INFO - knowledge worker kw12 start
+2025-11-30 18:48:47,484 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-11-30 18:48:47,484 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.h
+2025-11-30 18:48:47,484 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.cpp
+2025-11-30 18:48:47,484 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=51, active_workers=9/12
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGLIB.cmake
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/CMakeLists.txt
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.cpp
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.h
+2025-11-30 18:48:47,485 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=51, active_workers=9/12
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindUdev.cmake
+2025-11-30 18:48:47,485 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CHANGELOG.md
+2025-11-30 18:48:47,486 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.h (ext=.h, size=874)
+2025-11-30 18:48:47,486 - Knowledge - INFO - knowledge worker kw13 start
+2025-11-30 18:48:47,486 - Knowledge - INFO - [kw12] Queue=51, InProgress=0, PendingWorkers=9/12, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,486 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-11-30 18:48:47,486 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.h (ext=.h, size=1649)
+2025-11-30 18:48:47,486 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunctionType.h
+2025-11-30 18:48:47,487 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsString.h
+2025-11-30 18:48:47,487 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamer.cmake
+2025-11-30 18:48:47,487 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/CMakeLists.txt (ext=.txt, size=3253)
+2025-11-30 18:48:47,487 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CHANGELOG.md
+2025-11-30 18:48:47,488 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.h (ext=.h, size=963)
+2025-11-30 18:48:47,488 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/NoEncryption.h
+2025-11-30 18:48:47,488 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindUdev.cmake (ext=.cmake, size=769)
+2025-11-30 18:48:47,488 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/javascript/CORS/test.html
+2025-11-30 18:48:47,488 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/javascript/CORS/test.html (ext=.html, size=421)
+2025-11-30 18:48:47,488 - Knowledge - INFO - [kw13] Queue=31, InProgress=0, PendingWorkers=11/13, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,488 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CHANGELOG.md (ext=.md, size=5561)
+2025-11-30 18:48:47,489 - Knowledge - INFO - knowledge worker kw14 start
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.h
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.h
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/cSettings.h
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.cpp
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.cpp
+2025-11-30 18:48:47,489 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNEXUS.cmake
+2025-11-30 18:48:47,490 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CHANGELOG.md (ext=.md, size=1015)
+2025-11-30 18:48:47,490 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDS.cmake
+2025-11-30 18:48:47,490 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/NoEncryption.h (ext=.h, size=1649)
+2025-11-30 18:48:47,490 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/WebKitBrowserPlugin.md
+2025-11-30 18:48:47,490 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=31, active_workers=11/14
+2025-11-30 18:48:47,491 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/README.md
+2025-11-30 18:48:47,491 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongEnabled.h
+2025-11-30 18:48:47,491 - Knowledge - INFO - [kw14] Queue=21, InProgress=0, PendingWorkers=12/14, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,491 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.h (ext=.h, size=1156)
+2025-11-30 18:48:47,491 - Knowledge - INFO - knowledge worker kw15 start
+2025-11-30 18:48:47,492 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-11-30 18:48:47,492 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.h (ext=.h, size=1079)
+2025-11-30 18:48:47,492 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsProcess.h
+2025-11-30 18:48:47,492 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.cpp
+2025-11-30 18:48:47,493 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.cpp (ext=.cpp, size=1879)
+2025-11-30 18:48:47,493 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Module.h
+2025-11-30 18:48:47,493 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Module.h (ext=.h, size=917)
+2025-11-30 18:48:47,493 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/main.cpp
+2025-11-30 18:48:47,493 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.h
+2025-11-30 18:48:47,494 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqliteSee.cmake
+2025-11-30 18:48:47,494 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=51, active_workers=12/15
+2025-11-30 18:48:47,495 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLOG_MILESTONE.h
+2025-11-30 18:48:47,495 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/README.md (ext=.md, size=70)
+2025-11-30 18:48:47,495 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/SecurityAgent.cpp
+2025-11-30 18:48:47,495 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.cpp
+2025-11-30 18:48:47,495 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongDisabled.h
+2025-11-30 18:48:47,495 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.h
+2025-11-30 18:48:47,496 - Knowledge - INFO - [kw15] Queue=11, InProgress=0, PendingWorkers=13/15, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,496 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.cpp (ext=.cpp, size=1649)
+2025-11-30 18:48:47,496 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:48:47,496 - Knowledge - INFO - Worker kw1 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.cpp
+2025-11-30 18:48:47,496 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.cpp (ext=.cpp, size=1497)
+2025-11-30 18:48:47,496 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.h (ext=.h, size=956)
+2025-11-30 18:48:47,496 - Knowledge - INFO - Worker kw2 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.cpp
+2025-11-30 18:48:47,497 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSearchRDKProfile.h
+2025-11-30 18:48:47,497 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=21, active_workers=13/15
+2025-11-30 18:48:47,497 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/services.cmake
+2025-11-30 18:48:47,497 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLOG_MILESTONE.h (ext=.h, size=810)
+2025-11-30 18:48:47,498 - Knowledge - INFO - knowledge worker kw16 start
+2025-11-30 18:48:47,498 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongDisabled.h (ext=.h, size=1228)
+2025-11-30 18:48:47,498 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.cpp (ext=.cpp, size=781)
+2025-11-30 18:48:47,498 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-11-30 18:48:47,498 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=11, active_workers=13/16
+2025-11-30 18:48:47,498 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.h (ext=.h, size=1306)
+2025-11-30 18:48:47,499 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDS.cmake (ext=.cmake, size=1842)
+2025-11-30 18:48:47,499 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/HawaiiMessage.cpp
+2025-11-30 18:48:47,500 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/TlsEnabled.h
+2025-11-30 18:48:47,501 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/WebKitBrowserPlugin.md (ext=.md, size=373)
+2025-11-30 18:48:47,501 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqliteSee.cmake (ext=.cmake, size=774)
+2025-11-30 18:48:47,501 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/tptimer.h
+2025-11-30 18:48:47,503 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsFile.h
+2025-11-30 18:48:47,503 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CONTRIBUTING.md
+2025-11-30 18:48:47,503 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.cpp
+2025-11-30 18:48:47,524 - Knowledge - INFO - [kw16] Queue=1, InProgress=0, PendingWorkers=14/16, Completed=0/153 (0.0%)
+2025-11-30 18:48:47,524 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/ConnectionInitializationResult.h
+2025-11-30 18:48:47,526 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.h
+2025-11-30 18:48:47,526 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.h (ext=.h, size=1725)
+2025-11-30 18:48:47,526 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/ConnectionInitializationResult.h (ext=.h, size=1319)
+2025-11-30 18:48:47,531 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindTTS.cmake
+2025-11-30 18:48:47,531 - Knowledge - INFO - Worker kw15 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/SyslogOutput.cpp
+2025-11-30 18:48:47,533 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.h
+2025-11-30 18:48:47,534 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.h (ext=.h, size=1720)
+2025-11-30 18:48:47,534 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.h
+2025-11-30 18:48:47,534 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamerVideo.cmake
+2025-11-30 18:48:47,535 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchroIarm.hpp
+2025-11-30 18:48:47,535 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsThreadRAII.h
+2025-11-30 18:48:47,536 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CONTRIBUTING.md (ext=.md, size=267)
+2025-11-30 18:48:47,536 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsInputValidator.h
+2025-11-30 18:48:47,539 - Knowledge - INFO - Batch sizing: calculated=1, max_allowed=25, queue=1, active_workers=15/16
+2025-11-30 18:48:47,540 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.cpp (small file (2252 bytes))
+2025-11-30 18:48:47,544 - Knowledge - INFO - knowledge worker kw17 start
+2025-11-30 18:48:47,546 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-11-30 18:48:47,547 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.h
+2025-11-30 18:48:47,548 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/BrowserConsoleLog.h
+2025-11-30 18:48:47,549 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.h
+2025-11-30 18:48:47,549 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindTTS.cmake (ext=.cmake, size=1379)
+2025-11-30 18:48:47,550 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.h
+2025-11-30 18:48:47,550 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.h
+2025-11-30 18:48:47,550 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cov_build.sh
+2025-11-30 18:48:47,550 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.h (ext=.h, size=1157)
+2025-11-30 18:48:47,551 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqlite.cmake
+2025-11-30 18:48:47,551 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/build_dependencies.sh
+2025-11-30 18:48:47,551 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsThreadRAII.h (ext=.h, size=1417)
+2025-11-30 18:48:47,552 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PluginInterfaceBuilder.h
+2025-11-30 18:48:47,666 - Knowledge - INFO - knowledge worker kw18 start
+2025-11-30 18:48:47,677 - Knowledge - INFO - Worker kw19 created using shared MongoDB connection pool
+2025-11-30 18:48:47,692 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.h
+2025-11-30 18:48:47,699 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.h (ext=.h, size=1085)
+2025-11-30 18:48:47,706 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.cpp
+2025-11-30 18:48:47,707 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsisValidInt.h
+2025-11-30 18:48:47,711 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/Findjsoncpp.cmake
+2025-11-30 18:48:47,711 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/Findjsoncpp.cmake (ext=.cmake, size=1853)
+2025-11-30 18:48:47,711 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindIARMBus.cmake
+2025-11-30 18:48:47,711 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindIARMBus.cmake (ext=.cmake, size=1734)
+2025-11-30 18:48:47,717 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindRDKStorageManager.cmake
+2025-11-30 18:48:47,717 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindRDKStorageManager.cmake (ext=.cmake, size=983)
+2025-11-30 18:48:47,722 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCEC.cmake
+2025-11-30 18:48:47,723 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCEC.cmake (ext=.cmake, size=1947)
+2025-11-30 18:48:47,723 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAC.cmake
+2025-11-30 18:48:47,723 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAC.cmake (ext=.cmake, size=1567)
+2025-11-30 18:48:47,723 - Knowledge - INFO - Worker kw8 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLibSoup.cmake
+2025-11-30 18:48:47,724 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLibSoup.cmake (ext=.cmake, size=1398)
+2025-11-30 18:48:47,750 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.h (ext=.h, size=1051)
+2025-11-30 18:48:47,751 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.h (ext=.h, size=1335)
+2025-11-30 18:48:47,765 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.h
+2025-11-30 18:48:47,765 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqlite.cmake (ext=.cmake, size=771)
+2025-11-30 18:48:47,772 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.h (ext=.h, size=1276)
+2025-11-30 18:48:47,795 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsCStr.h
+2025-11-30 18:48:47,795 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsCStr.h (ext=.h, size=746)
+2025-11-30 18:48:47,795 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchro.hpp
+2025-11-30 18:48:47,799 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:48:47,845 - Knowledge - INFO - Worker kw5 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.cpp
+2025-11-30 18:48:47,846 - Knowledge - INFO - knowledge worker kw19 start
+2025-11-30 18:48:47,846 - Knowledge - INFO - Worker kw20 created using shared MongoDB connection pool
+2025-11-30 18:48:47,846 - Knowledge - INFO - Worker kw3 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.h
+2025-11-30 18:48:47,846 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsisValidInt.h (ext=.h, size=1601)
+2025-11-30 18:48:47,846 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.h
+2025-11-30 18:48:47,847 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.h (ext=.h, size=998)
+2025-11-30 18:48:47,847 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.cpp
+2025-11-30 18:48:47,848 - Knowledge - INFO - Worker kw7 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindBCM_HOST.cmake
+2025-11-30 18:48:47,848 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.cpp
+2025-11-30 18:48:47,854 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/CommandInterface.h
+2025-11-30 18:48:47,898 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetRFCConfig.h
+2025-11-30 18:48:47,899 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetRFCConfig.h (ext=.h, size=1043)
+2025-11-30 18:48:47,899 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilssyncPersistFile.h
+2025-11-30 18:48:47,899 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilssyncPersistFile.h (ext=.h, size=1541)
+2025-11-30 18:48:47,899 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsController.h
+2025-11-30 18:48:47,918 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsUnused.h
+2025-11-30 18:48:47,939 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsTelemetry.h
+2025-11-30 18:48:47,940 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.cpp
+2025-11-30 18:48:47,941 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitImplementation.cpp
+2025-11-30 18:48:47,941 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CMakeLists.txt
+2025-11-30 18:48:47,945 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.cpp (ext=.cpp, size=1518)
+2025-11-30 18:48:47,946 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDL.cmake
+2025-11-30 18:48:47,946 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/JsonRpcInterface.h
+2025-11-30 18:48:47,946 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.cpp (ext=.cpp, size=1122)
+2025-11-30 18:48:47,946 - Knowledge - INFO - knowledge worker kw20 start
+2025-11-30 18:48:47,959 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsJsonRpc.h
+2025-11-30 18:48:47,960 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsUnused.h (ext=.h, size=750)
+2025-11-30 18:48:47,961 - Knowledge - INFO - Worker kw12 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsfileExists.h
+2025-11-30 18:48:47,961 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsfileExists.h (ext=.h, size=880)
+2025-11-30 18:48:47,961 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsTelemetry.h (ext=.h, size=1892)
+2025-11-30 18:48:47,962 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetFileContent.h
+2025-11-30 18:48:47,963 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLogging.h
+2025-11-30 18:48:47,971 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.cpp (small file (2805 bytes))
+2025-11-30 18:48:47,972 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindUdev.cmake
+2025-11-30 18:48:47,973 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.h
+2025-11-30 18:48:47,974 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitImplementation.cpp (ext=.cpp, size=160767)
+2025-11-30 18:48:47,987 - Knowledge - INFO - Worker kw10 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/BinaryInterface.h
+2025-11-30 18:48:48,004 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamer.cmake (small file (2703 bytes))
+2025-11-30 18:48:48,020 - Knowledge - INFO - Worker kw4 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.cpp
+2025-11-30 18:48:48,020 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.cpp
+2025-11-30 18:48:48,040 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLogging.h (ext=.h, size=1834)
+2025-11-30 18:48:48,045 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.cpp (small file (2389 bytes))
+2025-11-30 18:48:48,048 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CMakeLists.txt (ext=.txt, size=3949)
+2025-11-30 18:48:48,058 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CMakeLists.txt
+2025-11-30 18:48:48,058 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PowerManagerInterface.h
+2025-11-30 18:48:48,058 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/BinaryInterface.h (ext=.h, size=1699)
+2025-11-30 18:48:48,065 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDS.cmake
+2025-11-30 18:48:48,078 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNEXUS.cmake (small file (2835 bytes))
+2025-11-30 18:48:48,078 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.cpp (ext=.cpp, size=1781)
+2025-11-30 18:48:48,079 - Knowledge - INFO - Worker kw13 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsIarm.h
+2025-11-30 18:48:48,080 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CookieJarCryptoExample.h (small file (2895 bytes))
+2025-11-30 18:48:48,111 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CHANGELOG.md
+2025-11-30 18:48:48,120 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CHANGELOG.md (ext=.md, size=1015)
+2025-11-30 18:48:48,120 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CMakeLists.txt (ext=.txt, size=2243)
+2025-11-30 18:48:48,120 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAamp.cmake
+2025-11-30 18:48:48,121 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindPlabels.cmake
+2025-11-30 18:48:48,121 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindPlabels.cmake (ext=.cmake, size=1051)
+2025-11-30 18:48:48,121 - Knowledge - INFO - Worker kw6 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCTRLM.cmake
+2025-11-30 18:48:48,129 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCTRLM.cmake (ext=.cmake, size=1245)
+2025-11-30 18:48:48,131 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.cpp
+2025-11-30 18:48:48,138 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PowerManagerInterface.h (ext=.h, size=1006)
+2025-11-30 18:48:48,155 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindTTS.cmake
+2025-11-30 18:48:48,195 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.cpp
+2025-11-30 18:48:48,204 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.cpp (small file (2080 bytes))
+2025-11-30 18:48:48,213 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.cpp (ext=.cpp, size=781)
+2025-11-30 18:48:48,213 - Knowledge - INFO - Worker kw9 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsBIT.h
+2025-11-30 18:48:48,214 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamerVideo.cmake (small file (2892 bytes))
+2025-11-30 18:48:48,214 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.h
+2025-11-30 18:48:48,232 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.h
+2025-11-30 18:48:48,233 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/TraceOutput.cpp
+2025-11-30 18:48:48,237 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.cpp (small file (2781 bytes))
+2025-11-30 18:48:48,239 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/SecurityAgent.cpp (small file (2621 bytes))
+2025-11-30 18:48:48,240 - Knowledge - INFO - Worker kw14 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.h
+2025-11-30 18:48:48,246 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.h (ext=.h, size=1283)
+2025-11-30 18:48:48,265 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsBIT.h (ext=.h, size=1312)
+2025-11-30 18:48:48,265 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunctionType.h (small file (2303 bytes))
+2025-11-30 18:48:48,266 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/Findjsoncpp.cmake
+2025-11-30 18:48:48,266 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindBCM_HOST.cmake (small file (2134 bytes))
+2025-11-30 18:48:48,282 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.h (ext=.h, size=869)
+2025-11-30 18:48:48,285 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/BrowserConsoleLog.h (small file (2397 bytes))
+2025-11-30 18:48:48,285 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/Client.h
+2025-11-30 18:48:48,362 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.h (small file (2670 bytes))
+2025-11-30 18:48:48,362 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.h (small file (2873 bytes))
+2025-11-30 18:48:48,381 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindIARMBus.cmake
+2025-11-30 18:48:48,387 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAamp.cmake (small file (2167 bytes))
+2025-11-30 18:48:48,395 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEBackend.cmake (small file (2002 bytes))
+2025-11-30 18:48:48,398 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsProcess.h (small file (2699 bytes))
+2025-11-30 18:48:48,443 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsFile.h (small file (2625 bytes))
+2025-11-30 18:48:48,457 - Knowledge - INFO - Worker kw11 processing /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/SingleClientServer.h
+2025-11-30 18:48:48,515 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindRDKStorageManager.cmake
+2025-11-30 18:48:48,556 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCEC.cmake
+2025-11-30 18:48:48,563 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSearchRDKProfile.h (small file (2043 bytes))
+2025-11-30 18:48:48,584 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAC.cmake
+2025-11-30 18:48:48,616 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLibSoup.cmake
+2025-11-30 18:48:48,763 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/CommandInterface.h (small file (2143 bytes))
+2025-11-30 18:48:48,805 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsIarm.h (small file (2992 bytes))
+2025-11-30 18:48:48,810 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.cpp (small file (2421 bytes))
+2025-11-30 18:48:48,816 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/Client.h (small file (2756 bytes))
+2025-11-30 18:48:48,897 - Knowledge - INFO - Fast-tracked /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.cpp (small file (2307 bytes))
+2025-11-30 18:48:52,351 - Knowledge - INFO - [LLM_CALL] Completed: FindGLIB.cmake:chunk1, Duration: 4391ms, PromptTokens: 3704, CompletionTokens: 59, Cost: $0.00039
+2025-11-30 18:48:52,354 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGLIB.cmake
+2025-11-30 18:48:52,715 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2025-11-30 18:48:52,847 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 132ms
+2025-11-30 18:48:52,851 - Knowledge - INFO - Progress: 6.5% | Files: 10/153 | Rate: 1.42 files/sec | Queue: 0
+2025-11-30 18:48:53,794 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:48:53,816 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNopoll.cmake
+2025-11-30 18:48:53,859 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindLMPLAYER.cmake
+2025-11-30 18:48:54,006 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCurl.cmake
+2025-11-30 18:48:54,291 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGLIB.cmake
+2025-11-30 18:48:54,313 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamer.cmake
+2025-11-30 18:48:54,467 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNEXUS.cmake
+2025-11-30 18:48:54,744 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqliteSee.cmake
+2025-11-30 18:48:54,745 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindGStreamerVideo.cmake
+2025-11-30 18:48:54,831 - Knowledge - INFO - [LLM_CALL] Completed: build_dependencies.sh:chunk1, Duration: 6327ms, PromptTokens: 3820, CompletionTokens: 59, Cost: $0.00041
+2025-11-30 18:48:54,831 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/build_dependencies.sh
+2025-11-30 18:48:55,101 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindSqlite.cmake
+2025-11-30 18:48:55,198 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindBCM_HOST.cmake
+2025-11-30 18:49:06,898 - Knowledge - INFO - [LLM_CALL] Completed: ClassDefinition.cpp:chunk1, Duration: 18711ms, PromptTokens: 2132, CompletionTokens: 437, Cost: $0.00039
+2025-11-30 18:49:06,899 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.cpp
+2025-11-30 18:49:11,101 - Knowledge - INFO - [LLM_CALL] Completed: WhiteListedOriginDomainsList.cpp:chunk1, Duration: 22981ms, PromptTokens: 2502, CompletionTokens: 434, Cost: $0.00042
+2025-11-30 18:49:11,107 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:49:11,449 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:49:12,081 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 289, Duration: 0ms
+2025-11-30 18:49:12,228 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 148ms
+2025-11-30 18:49:12,259 - Knowledge - INFO - Progress: 13.1% | Files: 20/153 | Rate: 0.76 files/sec | Queue: 0
+2025-11-30 18:49:14,465 - Knowledge - INFO - [LLM_CALL] Completed: UtilsgetFileContent.h:chunk1, Duration: 25753ms, PromptTokens: 5210, CompletionTokens: 501, Cost: $0.00072
+2025-11-30 18:49:14,482 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetFileContent.h
+2025-11-30 18:49:14,568 - Knowledge - INFO - [LLM_CALL] Completed: FindWPEWebKit.cmake:chunk1, Duration: 26346ms, PromptTokens: 3302, CompletionTokens: 59, Cost: $0.00035
+2025-11-30 18:49:14,573 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEWebKit.cmake
+2025-11-30 18:49:19,200 - Knowledge - INFO - [LLM_CALL] Completed: WebKitBrowserJsonRpc.cpp:chunk1, Duration: 30967ms, PromptTokens: 4254, CompletionTokens: 744, Cost: $0.00072
+2025-11-30 18:49:19,215 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowserJsonRpc.cpp
+2025-11-30 18:49:20,889 - Knowledge - INFO - [LLM_CALL] Completed: RequestHeaders.cpp:chunk1, Duration: 32078ms, PromptTokens: 2528, CompletionTokens: 394, Cost: $0.00041
+2025-11-30 18:49:20,907 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.cpp
+2025-11-30 18:49:21,393 - Knowledge - INFO - [LLM_CALL] Completed: TlsEnabled.h:chunk1, Duration: 32834ms, PromptTokens: 4500, CompletionTokens: 638, Cost: $0.00071
+2025-11-30 18:49:21,416 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/TlsEnabled.h
+2025-11-30 18:49:22,531 - Knowledge - INFO - [LLM_CALL] Completed: AAMPJSBindings.cpp:chunk1, Duration: 35032ms, PromptTokens: 2454, CompletionTokens: 487, Cost: $0.00044
+2025-11-30 18:49:22,531 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.cpp
+2025-11-30 18:49:23,964 - Knowledge - INFO - [LLM_CALL] Completed: SyslogOutput.cpp:chunk1, Duration: 36413ms, PromptTokens: 9600, CompletionTokens: 769, Cost: $0.00127
+2025-11-30 18:49:23,997 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/SyslogOutput.cpp
+2025-11-30 18:49:24,601 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:24,602 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/HTML5Notification.h
+2025-11-30 18:49:24,719 - Knowledge - INFO - Processing batch of 1 files
+2025-11-30 18:49:24,755 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/SyslogOutput.cpp
+2025-11-30 18:49:24,824 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowserJsonRpc.cpp
+2025-11-30 18:49:25,219 - Knowledge - INFO - [LLM_CALL] Completed: SingleClientServer.h:chunk1, Duration: 36385ms, PromptTokens: 2158, CompletionTokens: 333, Cost: $0.00035
+2025-11-30 18:49:25,232 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/SingleClientServer.h
+2025-11-30 18:49:25,521 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.h
+2025-11-30 18:49:25,743 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/javascript/CORS/test.html
+2025-11-30 18:49:26,357 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/doc/WebKitBrowserPlugin.md
+2025-11-30 18:49:26,730 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2025-11-30 18:49:26,749 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 19ms
+2025-11-30 18:49:26,749 - Knowledge - INFO - Progress: 21.6% | Files: 33/153 | Rate: 0.81 files/sec | Queue: 0
+2025-11-30 18:49:26,783 - Knowledge - INFO - [LLM_CALL] Completed: cSettings.h:chunk1, Duration: 38543ms, PromptTokens: 3620, CompletionTokens: 466, Cost: $0.00055
+2025-11-30 18:49:26,829 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/cSettings.h
+2025-11-30 18:49:26,894 - Knowledge - INFO - [LLM_CALL] Completed: cov_build.sh:chunk1, Duration: 38076ms, PromptTokens: 2440, CompletionTokens: 59, Cost: $0.00027
+2025-11-30 18:49:26,900 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cov_build.sh
+2025-11-30 18:49:26,936 - Knowledge - INFO - [LLM_CALL] Completed: services.cmake:chunk1, Duration: 38566ms, PromptTokens: 2948, CompletionTokens: 59, Cost: $0.00032
+2025-11-30 18:49:26,988 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/services.cmake
+2025-11-30 18:49:27,100 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.h
+2025-11-30 18:49:27,380 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.h
+2025-11-30 18:49:27,490 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitImplementation.cpp
+2025-11-30 18:49:27,637 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CMakeLists.txt
+2025-11-30 18:49:27,811 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindAamp.cmake
+2025-11-30 18:49:27,854 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindPlabels.cmake
+2025-11-30 18:49:28,051 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindCTRLM.cmake
+2025-11-30 18:49:28,512 - Knowledge - INFO - [LLM_CALL] Completed: CookieJar.cpp:chunk1, Duration: 40029ms, PromptTokens: 4864, CompletionTokens: 663, Cost: $0.00075
+2025-11-30 18:49:28,525 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.cpp
+2025-11-30 18:49:30,471 - Knowledge - INFO - [LLM_CALL] Completed: LoggingUtils.cpp:chunk1, Duration: 42937ms, PromptTokens: 2836, CompletionTokens: 312, Cost: $0.00041
+2025-11-30 18:49:30,508 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.cpp
+2025-11-30 18:49:34,115 - Knowledge - INFO - [LLM_CALL] Completed: BridgeObject.cpp:chunk1, Duration: 46151ms, PromptTokens: 4988, CompletionTokens: 820, Cost: $0.00083
+2025-11-30 18:49:34,116 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.cpp
+2025-11-30 18:49:34,642 - Knowledge - INFO - [LLM_CALL] Completed: PingPongEnabled.h:chunk1, Duration: 46411ms, PromptTokens: 3070, CompletionTokens: 520, Cost: $0.00051
+2025-11-30 18:49:34,681 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongEnabled.h
+2025-11-30 18:49:35,479 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:35,479 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/NoEncryption.h
+2025-11-30 18:49:36,087 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Encryption/TlsEnabled.h
+2025-11-30 18:49:36,235 - Knowledge - INFO - [LLM_CALL] Completed: main.cpp:chunk1, Duration: 48177ms, PromptTokens: 4718, CompletionTokens: 997, Cost: $0.00087
+2025-11-30 18:49:36,236 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/main.cpp
+2025-11-30 18:49:37,429 - Knowledge - INFO - [LLM_CALL] Completed: WebKitBrowser.h:chunk1, Duration: 48977ms, PromptTokens: 5428, CompletionTokens: 800, Cost: $0.00086
+2025-11-30 18:49:37,450 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.h
+2025-11-30 18:49:38,594 - Knowledge - INFO - [LLM_CALL] Completed: frontpanel.h:chunk1, Duration: 49762ms, PromptTokens: 2520, CompletionTokens: 998, Cost: $0.00065
+2025-11-30 18:49:38,755 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.h
+2025-11-30 18:49:39,219 - Knowledge - INFO - [LLM_CALL] Completed: UtilsJsonRpc.h:chunk1, Duration: 50440ms, PromptTokens: 3912, CompletionTokens: 389, Cost: $0.00055
+2025-11-30 18:49:39,223 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsJsonRpc.h
+2025-11-30 18:49:39,581 - Knowledge - INFO - [LLM_CALL] Completed: WSEndpoint.cpp:chunk1, Duration: 51098ms, PromptTokens: 5228, CompletionTokens: 835, Cost: $0.00086
+2025-11-30 18:49:39,635 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.h
+2025-11-30 18:49:39,641 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.cpp
+2025-11-30 18:49:39,809 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.h
+2025-11-30 18:49:41,398 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Notification.cpp
+2025-11-30 18:49:41,434 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 288, Duration: 0ms
+2025-11-30 18:49:41,468 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 35ms
+2025-11-30 18:49:41,475 - Knowledge - INFO - Progress: 34.0% | Files: 52/153 | Rate: 0.94 files/sec | Queue: 0
+2025-11-30 18:49:41,538 - Knowledge - INFO - [LLM_CALL] Completed: HawaiiMessage.cpp:chunk1, Duration: 52990ms, PromptTokens: 4142, CompletionTokens: 806, Cost: $0.00074
+2025-11-30 18:49:41,545 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.cpp
+2025-11-30 18:49:41,577 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/HawaiiMessage.cpp
+2025-11-30 18:49:41,613 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Response.cpp
+2025-11-30 18:49:41,716 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/JsonRpc/Request.h
+2025-11-30 18:49:41,906 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/Client.h
+2025-11-30 18:49:42,200 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/Roles/SingleClientServer.h
+2025-11-30 18:49:46,610 - Knowledge - INFO - [LLM_CALL] Completed: PerformanceMetrics.cpp:chunk1, Duration: 57564ms, PromptTokens: 2872, CompletionTokens: 679, Cost: $0.00056
+2025-11-30 18:49:46,622 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.cpp
+2025-11-30 18:49:47,850 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.cpp
+2025-11-30 18:49:48,066 - Knowledge - INFO - [LLM_CALL] Completed: TraceOutput.cpp:chunk1, Duration: 58887ms, PromptTokens: 3790, CompletionTokens: 571, Cost: $0.00061
+2025-11-30 18:49:48,096 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/TraceOutput.cpp
+2025-11-30 18:49:48,126 - Knowledge - INFO - [LLM_CALL] Completed: UtilsSynchro.hpp:chunk1, Duration: 59842ms, PromptTokens: 2918, CompletionTokens: 495, Cost: $0.00049
+2025-11-30 18:49:48,135 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchro.hpp
+2025-11-30 18:49:48,452 - Knowledge - INFO - [LLM_CALL] Completed: TimeZoneSupport.cpp:chunk1, Duration: 60904ms, PromptTokens: 2526, CompletionTokens: 494, Cost: $0.00045
+2025-11-30 18:49:48,504 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.cpp
+2025-11-30 18:49:48,530 - Knowledge - INFO - [LLM_CALL] Completed: UtilsSynchroIarm.hpp:chunk1, Duration: 59981ms, PromptTokens: 2536, CompletionTokens: 438, Cost: $0.00043
+2025-11-30 18:49:48,531 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchroIarm.hpp
+2025-11-30 18:49:48,579 - Knowledge - INFO - [LLM_CALL] Completed: tptimer.h:chunk1, Duration: 59986ms, PromptTokens: 2280, CompletionTokens: 491, Cost: $0.00042
+2025-11-30 18:49:48,579 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/tptimer.h
+2025-11-30 18:49:49,204 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:49,212 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/CMakeLists.txt
+2025-11-30 18:49:49,768 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.cpp
+2025-11-30 18:49:50,312 - Knowledge - INFO - [LLM_CALL] Completed: PluginInterfaceBuilder.h:chunk1, Duration: 62116ms, PromptTokens: 2832, CompletionTokens: 501, Cost: $0.00048
+2025-11-30 18:49:50,338 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PluginInterfaceBuilder.h
+2025-11-30 18:49:50,880 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.cpp
+2025-11-30 18:49:50,950 - Knowledge - INFO - [LLM_CALL] Completed: JsonRpcInterface.h:chunk1, Duration: 62138ms, PromptTokens: 4586, CompletionTokens: 735, Cost: $0.00075
+2025-11-30 18:49:50,956 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/JsonRpcInterface.h
+2025-11-30 18:49:51,530 - Knowledge - INFO - [LLM_CALL] Completed: WebKitBrowser.cpp:chunk1, Duration: 64029ms, PromptTokens: 9164, CompletionTokens: 763, Cost: $0.00122
+2025-11-30 18:49:51,540 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.cpp
+2025-11-30 18:49:52,155 - Knowledge - INFO - [LLM_CALL] Completed: UtilsString.h:chunk1, Duration: 64001ms, PromptTokens: 4432, CompletionTokens: 678, Cost: $0.00071
+2025-11-30 18:49:52,197 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsString.h
+2025-11-30 18:49:52,220 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:52,291 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CMakeLists.txt
+2025-11-30 18:49:52,419 - Knowledge - INFO - [LLM_CALL] Completed: UtilsController.h:chunk1, Duration: 63930ms, PromptTokens: 4066, CompletionTokens: 637, Cost: $0.00066
+2025-11-30 18:49:52,447 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsController.h
+2025-11-30 18:49:53,025 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/main.cpp
+2025-11-30 18:49:53,527 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.cpp
+2025-11-30 18:49:53,578 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJarCrypto/CookieJarCryptoExample.h
+2025-11-30 18:49:53,637 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:49:53,658 - Knowledge - INFO - [LLM_CALL] Completed: UtilsInputValidator.h:chunk1, Duration: 65602ms, PromptTokens: 4894, CompletionTokens: 624, Cost: $0.00074
+2025-11-30 18:49:53,663 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsInputValidator.h
+2025-11-30 18:49:53,678 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindAampJSBindings.cmake
+2025-11-30 18:49:53,881 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.cpp
+2025-11-30 18:49:54,213 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:54,213 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongEnabled.h
+2025-11-30 18:49:54,357 - Knowledge - INFO - [LLM_CALL] Completed: PerformanceMetrics.h:chunk1, Duration: 65254ms, PromptTokens: 9736, CompletionTokens: 1003, Cost: $0.00137
+2025-11-30 18:49:54,359 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.h
+2025-11-30 18:49:54,486 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEWebKit.cmake
+2025-11-30 18:49:54,542 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/cmake/FindWPEBackend.cmake
+2025-11-30 18:49:54,553 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/PingPong/PingPongDisabled.h
+2025-11-30 18:49:54,594 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2025-11-30 18:49:54,819 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/BridgeObject.h
+2025-11-30 18:49:54,821 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.cpp
+2025-11-30 18:49:54,833 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:54,880 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindNXCLIENT.cmake
+2025-11-30 18:49:54,891 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:54,910 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 316ms
+2025-11-30 18:49:54,915 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.h
+2025-11-30 18:49:54,949 - Knowledge - INFO - Progress: 64.7% | Files: 99/153 | Rate: 1.44 files/sec | Queue: 0
+2025-11-30 18:49:54,953 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/ConnectionInitializationResult.h
+2025-11-30 18:49:55,160 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.cpp
+2025-11-30 18:49:55,186 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunctionType.h
+2025-11-30 18:49:55,187 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/AAMPJSBindings.h
+2025-11-30 18:49:55,187 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/NotifyWPEFramework.h
+2025-11-30 18:49:55,188 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.h
+2025-11-30 18:49:55,188 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.h
+2025-11-30 18:49:55,218 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.h
+2025-11-30 18:49:55,304 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CHANGELOG.md
+2025-11-30 18:49:55,349 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.h
+2025-11-30 18:49:55,354 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/AAMPJSBindings.h
+2025-11-30 18:49:55,393 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/README.md
+2025-11-30 18:49:55,487 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/WSEndpoint.cpp
+2025-11-30 18:49:56,064 - Knowledge - INFO - [LLM_CALL] Completed: frontpanel.cpp:chunk1, Duration: 68078ms, PromptTokens: 10948, CompletionTokens: 1284, Cost: $0.00161
+2025-11-30 18:49:56,091 - Knowledge - INFO - done ingest for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.cpp
+2025-11-30 18:49:56,129 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.h
+2025-11-30 18:49:56,214 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsisValidInt.h
+2025-11-30 18:49:56,214 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.cpp
+2025-11-30 18:49:56,220 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/services.cmake
+2025-11-30 18:49:56,220 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsTelemetry.h
+2025-11-30 18:49:56,238 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.h
+2025-11-30 18:49:56,244 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CHANGELOG.md
+2025-11-30 18:49:56,252 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/CONTRIBUTING.md
+2025-11-30 18:49:56,253 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.h
+2025-11-30 18:49:56,254 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetFileContent.h
+2025-11-30 18:49:56,255 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/HawaiiMessage.cpp
+2025-11-30 18:49:56,255 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/build_dependencies.sh
+2025-11-30 18:49:56,256 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLogging.h
+2025-11-30 18:49:56,256 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/WhiteListedOriginDomainsList.h
+2025-11-30 18:49:56,257 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsJsonRpc.h
+2025-11-30 18:49:56,257 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.h
+2025-11-30 18:49:56,307 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsIarm.h
+2025-11-30 18:49:56,308 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.h
+2025-11-30 18:49:56,309 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.cpp
+2025-11-30 18:49:56,336 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PowerManagerInterface.h
+2025-11-30 18:49:56,429 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Module.h
+2025-11-30 18:49:56,430 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/RequestHeaders.cpp
+2025-11-30 18:49:56,460 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsBIT.h
+2025-11-30 18:49:56,462 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Utils.cpp
+2025-11-30 18:49:56,512 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/main.cpp
+2025-11-30 18:49:56,574 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/Milestone.h
+2025-11-30 18:49:56,819 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/SecurityAgent.cpp
+2025-11-30 18:49:57,055 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:57,056 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsFile.h
+2025-11-30 18:49:57,188 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchroIarm.hpp
+2025-11-30 18:49:57,300 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cov_build.sh
+2025-11-30 18:49:57,551 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.cpp
+2025-11-30 18:49:57,553 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CMakeLists.txt
+2025-11-30 18:49:57,579 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:57,580 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.cpp
+2025-11-30 18:49:57,601 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/CHANGELOG.md
+2025-11-30 18:49:57,901 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:57,902 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsString.h
+2025-11-30 18:49:57,945 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Module.h
+2025-11-30 18:49:58,020 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.cpp
+2025-11-30 18:49:58,022 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/cSettings.h
+2025-11-30 18:49:58,150 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/main.cpp
+2025-11-30 18:49:58,272 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/ClassDefinition.cpp
+2025-11-30 18:49:58,278 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsProcess.h
+2025-11-30 18:49:58,280 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2025-11-30 18:49:58,309 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 30ms
+2025-11-30 18:49:58,314 - Knowledge - INFO - Progress: 96.7% | Files: 149/153 | Rate: 2.05 files/sec | Queue: 0
+2025-11-30 18:49:58,485 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/JavaScriptFunction.h
+2025-11-30 18:49:58,745 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/Milestone.h
+2025-11-30 18:49:58,748 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/InjectedBundle/SecurityAgent.cpp
+2025-11-30 18:49:58,749 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/PerformanceMetrics.h
+2025-11-30 18:49:59,013 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Module.cpp
+2025-11-30 18:49:59,051 - Knowledge - INFO - Processing batch of 10 files
+2025-11-30 18:49:59,051 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsLOG_MILESTONE.h
+2025-11-30 18:49:59,095 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSearchRDKProfile.h
+2025-11-30 18:49:59,157 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/tptimer.h
+2025-11-30 18:49:59,278 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsThreadRAII.h
+2025-11-30 18:49:59,356 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/TraceOutput.cpp
+2025-11-30 18:49:59,464 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsCStr.h
+2025-11-30 18:49:59,475 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CookieJar.h
+2025-11-30 18:49:59,544 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/frontpanel.cpp
+2025-11-30 18:49:59,595 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/CommandInterface.h
+2025-11-30 18:49:59,707 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/PerformanceMetrics/Module.h
+2025-11-30 18:49:59,766 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsInputValidator.h
+2025-11-30 18:49:59,767 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/BrowserConsoleLog.h
+2025-11-30 18:49:59,848 - Knowledge - INFO - Processing batch of 12 files
+2025-11-30 18:49:59,849 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.cpp
+2025-11-30 18:49:59,924 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/JsonRpcInterface.h
+2025-11-30 18:49:59,929 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/PluginInterfaceBuilder.h
+2025-11-30 18:49:59,931 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/WebKitBrowser.h
+2025-11-30 18:50:00,126 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/LoggingUtils.cpp
+2025-11-30 18:50:00,128 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Tags.cpp
+2025-11-30 18:50:00,129 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsSynchro.hpp
+2025-11-30 18:50:00,130 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/CMakeLists.txt
+2025-11-30 18:50:00,193 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.h
+2025-11-30 18:50:00,321 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsgetRFCConfig.h
+2025-11-30 18:50:00,476 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilssyncPersistFile.h
+2025-11-30 18:50:00,546 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/TimeZone/TimeZoneSupport.cpp
+2025-11-30 18:50:00,604 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsController.h
+2025-11-30 18:50:00,606 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/WebSockets/CommunicationInterface/BinaryInterface.h
+2025-11-30 18:50:00,607 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.h
+2025-11-30 18:50:00,714 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsUnused.h
+2025-11-30 18:50:00,774 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/RequestHeaders.cpp
+2025-11-30 18:50:00,777 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/helpers/UtilsfileExists.h
+2025-11-30 18:50:00,943 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/CMakeLists.txt
+2025-11-30 18:50:01,036 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/BridgeObject.cpp
+2025-11-30 18:50:01,205 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/NotifyWPEFramework.cpp
+2025-11-30 18:50:01,258 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/WhiteListedOriginDomainsList.cpp
+2025-11-30 18:50:01,454 - Knowledge - INFO - process ingested knowledge for /Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/WebKitBrowser/Extension/ProcessInfo.cpp
+2025-11-30 18:50:02,167 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 272, Duration: 0ms
+2025-11-30 18:50:02,169 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 3ms
+2025-11-30 18:50:02,170 - Knowledge - INFO - Progress: 100.0% | Files: 153/153 | Rate: 2.01 files/sec | Queue: 0
+2025-11-30 18:50:03,972 - Knowledge - INFO - Knowledge creation complete
+2025-11-30 18:50:03,973 - Knowledge - INFO - ==================================================
+2025-11-30 18:50:03,973 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-11-30 18:50:03,974 - Knowledge - INFO - ==================================================
+2025-11-30 18:50:03,974 - Knowledge - INFO - Total processing time: 78.23 seconds (1.30 minutes)
+2025-11-30 18:50:03,974 - Knowledge - INFO - Files processed: 0
+2025-11-30 18:50:03,974 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-11-30 18:50:03,974 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-11-30 18:50:03,974 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-11-30 18:50:03,974 - Knowledge - INFO - LLM Processing: 1772.68s (2265.9%)
+2025-11-30 18:50:03,974 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-11-30 18:50:03,974 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-11-30 18:50:03,974 - Knowledge - INFO - WebSocket Communication: 0.68s (0.9%)
+2025-11-30 18:50:03,974 - Knowledge - INFO - 
+[LLM_STATS]
+2025-11-30 18:50:03,975 - Knowledge - INFO - Total LLM calls: 39
+2025-11-30 18:50:03,975 - Knowledge - INFO - Average LLM response time: 45453ms
+2025-11-30 18:50:03,975 - Knowledge - INFO - Average prompt tokens: 4216.9
+2025-11-30 18:50:03,975 - Knowledge - INFO - Average completion tokens: 564.9
+2025-11-30 18:50:03,975 - Knowledge - INFO - Total prompt tokens: 164458
+2025-11-30 18:50:03,975 - Knowledge - INFO - Total completion tokens: 22031
+2025-11-30 18:50:03,975 - Knowledge - INFO - Total LLM cost: $0.0253
+2025-11-30 18:50:03,975 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-11-30 18:50:03,975 - Knowledge - INFO - MongoDB operations: 0
+2025-11-30 18:50:03,975 - Knowledge - INFO - Redis operations: 0
+2025-11-30 18:50:03,975 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-11-30 18:50:03,976 - Knowledge - INFO - WebSocket messages sent: 14
+2025-11-30 18:50:03,976 - Knowledge - INFO - Average message size: 142.4 bytes
+2025-11-30 18:50:03,976 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-11-30 18:50:03,976 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-11-30 18:50:03,976 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-11-30 18:50:03,976 - Knowledge - INFO - ==================================================
+2025-11-30 18:50:03,976 - Knowledge - INFO - ==================================================
+2025-11-30 18:50:03,976 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-11-30 18:50:03,976 - Knowledge - INFO - ==================================================
+2025-11-30 18:50:03,976 - Knowledge - INFO - Total processing time: 78.29 seconds (1.30 minutes)
+2025-11-30 18:50:03,976 - Knowledge - INFO - Files processed: 153 of 153
+2025-11-30 18:50:03,977 - Knowledge - INFO - Processing rate: 1.95 files/second
+2025-11-30 18:50:03,977 - Knowledge - INFO - WebSocket messages sent: 7
+2025-11-30 18:50:03,977 - Knowledge - INFO - MongoDB operations: 153
+2025-11-30 18:50:03,977 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-11-30 18:50:03,977 - Knowledge - INFO - LLM costs: $0.0283
+2025-11-30 18:50:03,977 - Knowledge - INFO - Prompt tokens: 181110
+2025-11-30 18:50:03,977 - Knowledge - INFO - Completion tokens: 25520
+2025-11-30 18:50:03,977 - Knowledge - INFO - Updating org costs, total cost: 0.028318999999999997
+2025-11-30 18:50:08,337 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 269, Duration: 0ms
+2025-11-30 18:50:08,338 - Knowledge - INFO - 💾 SAVING TO REDIS - Prefix: knowledge:b2073vr:
+2025-11-30 18:50:08,339 - Knowledge - INFO - 💾 Files to save: source_files=153, file_info=153, docs=0, code_bases=1
+2025-11-30 18:50:08,339 - Knowledge - INFO - 💾 Source files list: ['/Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDL.cmake', '/Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindUdev.cmake', '/Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindDS.cmake', '/Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/FindTTS.cmake', '/Users/veera/Documents/kavia-backend/graphnode-backend-api/data/rdk7542/786/b2073vr/entservices-runtime-786/cmake/Findjsoncpp.cmake']...
+2025-11-30 18:50:08,339 - Knowledge - INFO - 💾 Code bases: ['https://github.com/kavia-common/entservices-runtime-786.git:kavia-main']
+2025-11-30 18:50:08,368 - Knowledge - INFO - ✅ Knowledge saved to Redis successfully - Prefix: knowledge:b2073vr:, Files: 153
+2025-11-30 18:50:10,425 - Knowledge - INFO - 🔍 GETTING FROM REDIS - Requested IDs: ['b2073vr', 'b4400wa', 'b49665h', 'b5456nr', 'b7357kb']
+2025-11-30 18:50:10,425 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b2073vr, Prefix: knowledge:b2073vr:
+2025-11-30 18:50:10,426 - Knowledge - INFO - 🔍 FOUND source_files: 153 files
+2025-11-30 18:50:10,426 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-runtime-786.git:kavia-main']
+2025-11-30 18:50:10,452 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b4400wa, Prefix: knowledge:b4400wa:
+2025-11-30 18:50:10,452 - Knowledge - INFO - 🔍 FOUND source_files: 173 files
+2025-11-30 18:50:10,453 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-deviceanddisplay-786.git:kavia-main']
+2025-11-30 18:50:10,473 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b49665h, Prefix: knowledge:b49665h:
+2025-11-30 18:50:10,474 - Knowledge - INFO - 🔍 FOUND source_files: 473 files
+2025-11-30 18:50:10,474 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-infra-786.git:kavia-main']
+2025-11-30 18:50:10,504 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b5456nr, Prefix: knowledge:b5456nr:
+2025-11-30 18:50:10,509 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b7357kb, Prefix: knowledge:b7357kb:
+2025-11-30 18:50:10,514 - Knowledge - INFO - ✅ RETRIEVED FROM REDIS - source_files: 799, file_info: 882, code_bases: ['https://github.com/kavia-common/entservices-runtime-786.git:kavia-main', 'https://github.com/kavia-common/entservices-deviceanddisplay-786.git:kavia-main', 'https://github.com/kavia-common/entservices-infra-786.git:kavia-main']
+2025-11-30 18:50:10,514 - Knowledge - INFO - 🔍 GETTING FROM REDIS - Requested IDs: ['sWok1R', 'b2073vr', 'b4400wa', 'b49665h', 'b5456nr', 'b7357kb']
+2025-11-30 18:50:10,514 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: sWok1R, Prefix: knowledge:sWok1R:
+2025-11-30 18:50:10,519 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b2073vr, Prefix: knowledge:b2073vr:
+2025-11-30 18:50:10,520 - Knowledge - INFO - 🔍 FOUND source_files: 153 files
+2025-11-30 18:50:10,520 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-runtime-786.git:kavia-main']
+2025-11-30 18:50:10,532 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b4400wa, Prefix: knowledge:b4400wa:
+2025-11-30 18:50:10,532 - Knowledge - INFO - 🔍 FOUND source_files: 173 files
+2025-11-30 18:50:10,532 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-deviceanddisplay-786.git:kavia-main']
+2025-11-30 18:50:10,548 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b49665h, Prefix: knowledge:b49665h:
+2025-11-30 18:50:10,554 - Knowledge - INFO - 🔍 FOUND source_files: 473 files
+2025-11-30 18:50:10,554 - Knowledge - INFO - 🔍 FOUND source_code_bases: ['https://github.com/kavia-common/entservices-infra-786.git:kavia-main']
+2025-11-30 18:50:10,582 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b5456nr, Prefix: knowledge:b5456nr:
+2025-11-30 18:50:10,587 - Knowledge - INFO - 🔍 GETTING FROM REDIS - ID: b7357kb, Prefix: knowledge:b7357kb:
+2025-11-30 18:50:10,591 - Knowledge - INFO - ✅ RETRIEVED FROM REDIS - source_files: 799, file_info: 882, code_bases: ['https://github.com/kavia-common/entservices-runtime-786.git:kavia-main', 'https://github.com/kavia-common/entservices-deviceanddisplay-786.git:kavia-main', 'https://github.com/kavia-common/entservices-infra-786.git:kavia-main']
